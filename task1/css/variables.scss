@@ -1,0 +1,48 @@
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 75em;
+
+//sizes variables
+
+$font-size: 15px;
+$username-font-size: 21px;
+$header-font-size: 24px;
+$sub-header-font-size: 16px;
+$default-border-width:2px;
+
+$wrapper-height: 500px;
+$wrapper-width: 1106px;
+$avatar-diameter: 112px;
+$avatar-border-width: 12px;
+
+//colors variables
+
+$wrapper-background-color: #1B2E3C;
+$default-border-color: #2D424F;
+
+$left-column-background-color:rgba(30,40,58,0.9);
+$right-column-background-color:rgba(39,58,72,0.9);
+  
+$avatar-border-color: #20323C;
+$nav-hover-background-color: #17232D;
+
+$default-font-color:#8196B6;
+$font-hover-color:#E8E9EA;
+
+$checkbox-background-color:#182A35;
+$checkbox-default-color:#213140;
+$checkbox-active-color:#188EB5;
+
+//form 
+
+$form-submit-color:#EDF7FB;
+$form-submit-background:#189AC4;
+$form-submit-active-color:#189AC4;
+$form-submit-active-background:#FFFFFF;
+
+$form-button-active-color:#189AC4;
+$form-button-uncative-color:#8DA3C5;
+
+// breakpoints
+$breakpoint-small: "only screen and (max-width:45em)";
+$breakpoint-medium: "only screen and (min-width: 45em)";

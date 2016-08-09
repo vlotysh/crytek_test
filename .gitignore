@@ -1,0 +1,8 @@
+nbproject
+/task2/vendor/
+/task1/bower_components/
+/task1/css/style.css
+/task1/css/.sass-cache/
+/task1/css/style.css.map
+/task1/.netbeans.xml
+/"task1/css/style.css\*

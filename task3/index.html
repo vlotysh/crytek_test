@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <pre>
+CREATE TABLE IF NOT EXISTS `Products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Product` varchar(255) NOT NULL,
+  `Cost` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+INSERT INTO `Products` (`id`, `Product`, `Cost`) VALUES
+(1, '12000 Kredits', 99.99),
+(2, '5200 Kredits', 49.99),
+(3, '2400 Kredits', 24.99),
+(4, '800 Kredits', 8.99),
+(5, '400 Kredits', 4.99);
+
+SELECT `id` , `Product` , `Cost`
+FROM `Products`
+WHERE `Cost` < (
+
+    SELECT AVG( Cost )
+    FROM `Products`
+)
+ORDER BY `id`
+        </pre>
+    </body>
+</html>

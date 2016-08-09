@@ -1,0 +1,22 @@
+{
+  "name": "task1",
+  "description": "crytek test code",
+  "main": "index.html",
+  "authors": [
+    "Vlad Lotysh"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Ionicons": "ionicons#^2.0.1",
+    "requirejs": "^2.2.0"
+  }
+}

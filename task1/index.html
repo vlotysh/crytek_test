@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script data-main="app" src="bower_components/requirejs/require.js" type="text/javascript"></script>
+        <link href="bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="background"></div>
+        <section class="wrapper">
+            <div class="row">
+                <section class="column-3 nopadding left-column">
+                    <figure>
+                        <img class="avatar" width="112" height="112" src="img/avatar.jpg" alt=""/>
+                    </figure>
+
+                    <span id="username">username</span>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#account"> <i class="ion-ios-people icon"></i>My Account</a></li>
+                            <li><a href="#profile"><i class="ion-ios-eye-outline icon"></i> My Profile</a></li>
+                            <li><a href="#settings" class="active"><i class="ion-ios-browsers-outline icon"></i> Settings</a></li>
+                            <li><a href="#logout"> <i class="ion-log-out icon"></i>Logout</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="column-9 nopadding right-column">
+                    <header>
+                        <h1>Settings</h1>
+                    </header>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    </p>
+                    <h2>GENERAL</h2>
+                    <form id="settings-form">
+                        <div class="row"> 
+                            <p class="pull-left">Launch on PC start</p> 
+                            <input class="castom-checkbox" id="pc-start" type="checkbox" name="settings" value="pc-start" ><label class="pull-right" for="pc-start"> <i class="ion-checkmark"></i></label>
+                        </div>
+                        <div class="row"> 
+                            <p class="pull-left">Launch minimized in system tray</p> 
+                            <input class="castom-checkbox" id="minimized-tray" type="checkbox" name="settings" value="minimized-tray"><label class="pull-right" for="minimized-tray"> <i class="ion-checkmark"></i></label></div>
+
+                        <div class="row">
+                            <input type="button" id="submit"  class="controll-button" value="SAVE">
+                            <input type="button" id="cancel" class="controll-button" value="CANCEL">
+                            <input type="button" id="default" class="controll-button" value="SAVED">
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </body>
+</html>

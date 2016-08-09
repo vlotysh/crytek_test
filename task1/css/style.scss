@@ -1,0 +1,204 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "clear.scss";
+@import "greed.scss";
+
+h1 {
+    font-weight: 300;
+    font-size: $header-font-size;
+    color: $font-hover-color;
+    margin-bottom: 20px;
+}
+
+h2 {
+    @extend h1;
+
+    font-size: $sub-header-font-size;
+    border-bottom: $default-border-width solid $default-border-color;
+    margin: 30px 0;
+    padding-bottom: 8px;
+}
+
+html, body {
+    height: 100%;
+    background-color: black;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important; 
+}   
+
+.nopadding {
+    padding: 0;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.hide {
+    display: none !important;
+}
+
+.background {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99;
+    background: radial-gradient(circle at 49.76% 5.54%, #5f8199, transparent 100%);
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+}
+.wrapper {
+    z-index: 100;
+    margin: 0 auto;
+    position: relative;
+    background-color: $right-column-background-color;
+}
+
+.left-column {
+    padding: 35px 0;
+    height: 100%;
+    background-color: $left-column-background-color;
+    border-right: $default-border-width solid $default-border-color;
+
+    .avatar {
+        width: $avatar-diameter;
+        height: $avatar-diameter;
+        display: block;
+        border-radius: 50%;
+        background-color: white;
+        border: $avatar-border-width solid $avatar-border-color;
+        margin: 0 auto;
+    }
+
+    #username {
+        margin: 20px 0 25px;
+        color: $font-hover-color;
+        text-align: center;
+        width: 100%;
+        font-size: $username-font-size;
+        display: inline-block;
+    }
+
+    nav {
+        li {
+            list-style-type: none;
+            padding:0 10px;
+
+            a,  a.active{
+                padding-left: 25px;
+                color: inherit;
+                display: block;
+                text-decoration: none;
+                height: 44px;
+                line-height: 44px;
+
+                &:hover {
+                    color: $font-hover-color;
+                    background-color: $nav-hover-background-color;
+                }
+
+                i {
+                    margin-right: 13px;
+                }  
+            }
+
+            a.active {
+                @extend a:hover;
+            }
+        }
+    }
+}
+
+.right-column {
+    padding: 35px 5px 35px 35px;
+
+    .castom-checkbox {
+        display: none;
+    }
+
+    .castom-checkbox {
+        & + label {
+            margin-right: 20px;
+            background-color: $checkbox-background-color;
+            color:$checkbox-default-color;
+            display: block;
+            font-size: 27px;
+            width: 35px;
+            line-height: 35px;
+            text-align: center;
+            height: 35px;
+            border-radius: 2px;
+        }
+
+        &:checked + label {
+            color:$checkbox-active-color;
+        }
+    }
+
+    #settings-form {
+        .row {
+            margin-bottom: 18px;
+
+            p {
+                @include vertical-align(); 
+            }
+        }
+
+        input[type="button"] {
+            float: right;
+            color:$default-font-color;
+            display:inline-block;
+            margin-right: 15px;
+            border-width: 0;
+            padding: 10px 20px;
+            background-color: transparent;
+            border-radius: 2px;
+            font-weight: bold;
+            background-color:transparent; 
+            border: $default-border-width solid transparent;
+
+            &#submit {
+                background-color:$form-submit-background; 
+                color:$form-submit-color;
+                border-color:$form-submit-background;
+
+                &:hover {
+                    background-color:$form-submit-active-background;
+                    border-color: $form-submit-active-background;
+                    color:$form-submit-active-color; 
+                }
+            }
+
+            &#cancel {
+                color:$form-button-uncative-color;
+
+                &:hover {
+                    border-color: $form-submit-active-color;
+                    color:$form-submit-active-color; 
+                }
+            }
+
+            &#default {
+                color:$form-button-uncative-color;
+                cursor: auto;
+                border-color:$form-button-uncative-color;
+            }
+        }
+    }
+}
+
+
